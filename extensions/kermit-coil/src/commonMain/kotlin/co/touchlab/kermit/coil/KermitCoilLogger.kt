@@ -19,11 +19,8 @@ import co.touchlab.kermit.mutableLoggerConfigInit
 import coil3.util.Logger as CoilLogger
 import kotlin.jvm.JvmOverloads
 
-class KermitCoilLogger @JvmOverloads constructor(
-    config: LoggerConfig,
-    tag: String = "Coil",
-    private val separator: String = "/",
-) : CoilLogger {
+class KermitCoilLogger @JvmOverloads constructor(config: LoggerConfig, tag: String = "Coil", private val separator: String = "/") :
+    CoilLogger {
 
     @JvmOverloads
     constructor(logger: KermitLogger, separator: String = "/") : this(
